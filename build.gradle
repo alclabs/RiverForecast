@@ -1,0 +1,33 @@
+// this bit of complexity is to pull down the main build scripts and apply them.
+configurations { gradleScript }
+
+buildscript {
+   repositories {
+      maven { url 'http://repo.alcshare.com' }
+   }
+}
+
+repositories { maven { url 'http://repo.alcshare.com' } }
+dependencies { gradleScript group: 'com.alcshare', name: 'addon-gradle', ext: 'gradle', version: '1.7' }
+configurations.gradleScript.resolve().each { apply from: it }
+
+//java version:
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+info {
+  name = 'River Forecast'
+  description = 'Obtains River Forecast from NOAA site'
+  version = '0.1'
+  vendor = 'ALC Labs'
+}
+
+dependencies {
+    compile 'org.json:json:20090211'
+    providedCompile 'com.controlj.green:addonsupport-api-addon:1.5.0'
+    providedCompile 'com.controlj.green:directaccess-api-addon:1.5.0'
+    providedCompile 'com.controlj.green:webaccess-api-addon:1.5.0'
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+}
+
+

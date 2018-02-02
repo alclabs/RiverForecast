@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>River Forecast</title>
+    <link rel="stylesheet" type="text/css" href="DataTables-1.10.15/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="DataTables-1.10.15/css/jquery.dataTables_themeroller.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="DataTables-1.10.15/css/dataTables.bootstrap.min.css"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="DataTables-1.10.15/css/dataTables.foundation.min.css"/>-->
+    <link rel="stylesheet" type="text/css" href="DataTables-1.10.15/css/dataTables.jqueryui.min.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="DataTables-1.10.15/css/dataTables.semanticui.min.css"/>-->
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="DataTables-1.10.15/js/jquery.dataTables.min.js"></script>
+    <!--<script type="text/javascript" src="DataTables-1.10.15/js/dataTables.bootstrap.min.js"></script>-->
+    <!--<script type="text/javascript" src="DataTables-1.10.15/js/dataTables.foundation.min.js"></script>-->
+    <script type="text/javascript" src="DataTables-1.10.15/js/dataTables.jqueryui.min.js"></script>
+    <!--<script type="text/javascript" src="DataTables-1.10.15/js/dataTables.semanticui.min.js"></script>-->
+    <script type="text/javascript" src="js/riverforecast.js"></script>
+</head>
+
+<body>
+<p><select id="riverName"></select>
+<select id="stationName"></select>
+<select id="valueType"></select></p>
+<p><label for="mbPath">Microblock path</label>
+<input id="mbPath" type="text"/></p>
+<p><input id="addButton" type="button" value="Add"/></p>
+<p></p>
+<p><input id="deleteButton" type="button" value="Delete Selected Mapping"/></p>
+<table id="mappings" >
+    <thead>
+    <tr>
+        <th>River</th>
+        <th>Station</th>
+        <th>Value Type</th>
+        <th>Microblock</th>
+    </tr>
+    </thead>
+</table>
+</body>
+</html>
